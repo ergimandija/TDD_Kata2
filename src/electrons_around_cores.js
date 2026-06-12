@@ -9,7 +9,7 @@ ElectronsAroundTheCore.prototype.add = function(string_numbers) {
         if(number == 3){
                 returnValue += 2;
         }
-		if(number == 5){
+        else if(number == 5){
 			returnValue += 4;
 		}
     });
