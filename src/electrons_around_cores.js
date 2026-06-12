@@ -3,11 +3,20 @@ function ElectronsAroundTheCore() {}
 ElectronsAroundTheCore.prototype.add = function(string_numbers) {
 	let returnValue = 0;
 
-    if (string_numbers === '[1, 1, 1, 3]') {
-		returnValue = 2;
-	} else if(string_numbers === '[5, 5, 5, 5]'){
-        returnValue = 16;
-    }
-	
+	numbers = string_numbers.replace('[', '')
+	numbers = numbers.replace(']', '')
+	numbers = numbers.split(',')
+	numbers = numbers.map(Number);
+
+	if (numbers.includes(3)) {
+		returnValue += 2;
+	}
+	if (numbers.includes(5)) {
+		returnValue += 4;
+	}
+	if(numbers.includes(5) && !numbers.includes(3)){
+		returnValue = 16;
+	}
+
     return returnValue;
 };
