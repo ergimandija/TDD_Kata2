@@ -3,11 +3,8 @@ function ElectronsAroundTheCore() {}
 ElectronsAroundTheCore.prototype.add = function(string_numbers) {
 	let returnValue = 0;
 
-	numbers = string_numbers.replace('[', '')
-	numbers = numbers.replace(']', '')
-	numbers = numbers.split(',')
-	numbers = numbers.map(Number);
-
+	numbers = string_numbers.replace('[', '').replace(']', '').split(',').map(Number);
+	
 	if (numbers.includes(3)) {
 		returnValue += 2;
 	}
