@@ -16,6 +16,8 @@ describe('Electrons Around The Core', function() {
 		expect(calculator.add('[1, 1, 1, 3]')).toEqual(2);
 	});
 
-	
+	it('should return 16 for string "[5, 5, 5, 5]"',function(){
+		expect(calculator.add('[5, 5, 5, 5]')).toEqual(16);
+	});
 
 });
