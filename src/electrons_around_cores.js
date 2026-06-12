@@ -5,9 +5,14 @@ ElectronsAroundTheCore.prototype.add = function(string_numbers) {
 
 	numbers = string_numbers.replace('[', '').replace(']', '').split(',').map(Number);
 	
-	if (numbers.includes(3)) {
-		returnValue += 2;
-	}
+    let sum = 0;
+	numbers.forEach(number => {
+        if(number == 3){
+                sum += 2;
+        }
+        
+    });
+    returnValue = sum;
 	if (numbers.includes(5)) {
 		returnValue += 4;
 	}
