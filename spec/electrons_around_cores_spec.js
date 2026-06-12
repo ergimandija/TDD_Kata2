@@ -28,4 +28,8 @@ describe('Electrons Around The Core', function() {
 		expect(calculator.add('[2, 2, 3, 3]')).toEqual(4);
 	});
 
+	it('should return 12 for string "[3, 5, 3, 5, 4, 2]"',function(){
+		expect(calculator.add('[3, 5, 3, 5, 4, 2]')).toEqual(12);
+	});
+
 });
